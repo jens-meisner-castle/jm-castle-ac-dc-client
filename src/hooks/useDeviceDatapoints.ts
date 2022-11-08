@@ -1,0 +1,41 @@
+import { useEffect, useState } from "react";
+import { UniqueDatapoint } from "../api-types/Types";
+import { defaultFetchOptions } from "./options/Utils";
+
+export interface DatapointsQueryStatus {
+  datapoints: UniqueDatapoint[] | undefined;
+  error: string | undefined;
+}
+
+export const useDeviceDatapoints = (apiUrl: string, deviceId?: string) => {
+  const [queryStatus, setQueryStatus] = useState<DatapointsQueryStatus>({
+    datapoints: undefined,
+    error: undefined,
+  });
+
+  useEffect(() => {
+    const options = defaultFetchOptions();
+    const url = deviceId
+      ? `${apiUrl}/system/device-datapoint?deviceId=${deviceId}`
+      : `${apiUrl}/system/device-datapoint`;
+    fetch(url, options)
+      .then((response) => {
+        response.json().then((obj) => {
+          const { response, error } = obj || {};
+          const { datapoint: datapoints } = response || {};
+          setQueryStatus({
+            error,
+            datapoints,
+          });
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        setQueryStatus((previous) => ({
+          error: error.toString(),
+          datapoints: previous.datapoints,
+        }));
+      });
+  }, [apiUrl, deviceId]);
+  return queryStatus;
+};
