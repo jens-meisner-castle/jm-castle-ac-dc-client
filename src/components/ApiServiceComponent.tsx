@@ -1,7 +1,7 @@
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Grid, IconButton, Typography } from "@mui/material";
+import { SerializableService } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { useMemo, useState } from "react";
-import { SerializableService } from "../api-types/Types";
 import { backendApiUrl } from "../configuration/Urls";
 import { TextareaComponent } from "./TextareaComponent";
 

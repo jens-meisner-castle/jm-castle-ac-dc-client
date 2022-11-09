@@ -1,5 +1,8 @@
 import { Grid, Typography } from "@mui/material";
-import { LocalDatapoint, UniqueDatapoint } from "../api-types/Types";
+import {
+  LocalDatapoint,
+  UniqueDatapoint,
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 
 export interface DatapointComponentProps {
   datapoint: UniqueDatapoint | LocalDatapoint;

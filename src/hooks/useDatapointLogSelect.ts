@@ -1,6 +1,9 @@
 import { DateTime } from "luxon";
 import { useEffect, useState } from "react";
-import { Row_DatapointLog, SelectResponse } from "../api-types/Types";
+import {
+  Row_DatapointLog,
+  SelectResponse,
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 import { defaultFetchOptions } from "./options/Utils";
 
 /**

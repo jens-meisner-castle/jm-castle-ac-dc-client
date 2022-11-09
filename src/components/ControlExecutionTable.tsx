@@ -7,9 +7,12 @@ import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
+import {
+  DatapointState,
+  UniqueDatapoint,
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 import { DateTime } from "luxon";
 import { CSSProperties } from "react";
-import { DatapointState, UniqueDatapoint } from "../api-types/Types";
 import { getDateFormatter, getNumberFormatter } from "../utils/Format";
 
 const numberFormatter = getNumberFormatter({ decimals: 2 });

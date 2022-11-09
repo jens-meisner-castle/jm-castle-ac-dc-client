@@ -4,7 +4,7 @@ import {
   DatapointState,
   LocalDatapoint,
   UniqueDatapoint,
-} from "../api-types/Types";
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 import { getNumberFormatter } from "../utils/Format";
 
 const numberFormatter = getNumberFormatter({ decimals: 2 });

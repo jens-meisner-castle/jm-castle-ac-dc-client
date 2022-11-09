@@ -5,7 +5,7 @@ import {
   getCategoryOfUnit,
   Row_AnyLog,
   UniqueDatapoint,
-} from "../../api-types/Types";
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 import { ChartChildType } from "../../charts/children/ChartChild";
 import { DatapointChartChildProps } from "../../charts/children/DatapointChartChild";
 import {

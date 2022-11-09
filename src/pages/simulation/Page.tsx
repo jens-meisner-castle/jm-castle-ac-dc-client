@@ -5,7 +5,7 @@ import {
   Device,
   DeviceDatapoint,
   SerializableDeviceType,
-} from "../../api-types/Types";
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 import { AppAction, AppActions } from "../../components/AppActions";
 import { SimulationPreviewComponent } from "../../components/SimulationPreviewComponent";
 import { backendApiUrl } from "../../configuration/Urls";

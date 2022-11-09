@@ -1,4 +1,8 @@
-import { AnyDataValue, Row_AnyLog, UniqueDatapoint } from "../api-types/Types";
+import {
+  AnyDataValue,
+  Row_AnyLog,
+  UniqueDatapoint,
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 
 const DatapointColors: Record<string, string> = {};
 

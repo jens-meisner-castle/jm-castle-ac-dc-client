@@ -7,7 +7,7 @@ import {
   AnyDataValue,
   DatapointState,
   SequenceState,
-} from "../../../api-types/Types";
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 import { TextareaComponent } from "../../../components/TextareaComponent";
 import { backendApiUrl } from "../../../configuration/Urls";
 import { useSystemDatastate } from "../../../hooks/useSystemDatastate";

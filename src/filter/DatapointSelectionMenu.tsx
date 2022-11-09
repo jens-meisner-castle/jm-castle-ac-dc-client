@@ -1,6 +1,6 @@
 import { Checkbox, FormControlLabel, Menu, MenuItem } from "@mui/material";
+import { UniqueDatapoint } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { useCallback } from "react";
-import { UniqueDatapoint } from "../api-types/Types";
 
 export type DatapointSelection = {
   datapoint: UniqueDatapoint;

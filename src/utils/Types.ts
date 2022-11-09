@@ -1,4 +1,9 @@
-import { AnyDataValue, AnyDate, AnyNumber, LuxonKey } from "../api-types/Types";
+import {
+  AnyDataValue,
+  AnyDate,
+  AnyNumber,
+  LuxonKey,
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 
 export type NumberFormatter = (n: AnyNumber) => string;
 export type DateFormatter = (n: AnyDate) => string;

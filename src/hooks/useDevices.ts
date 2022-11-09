@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Device, DeviceDatapoint } from "../api-types/Types";
+import { Device, DeviceDatapoint } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { defaultFetchOptions } from "./options/Utils";
 
 export interface DevicesQueryStatus {

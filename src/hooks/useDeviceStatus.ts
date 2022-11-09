@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { DeviceStatus } from "../api-types/Types";
+import { DeviceStatus } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { defaultFetchOptions } from "./options/Utils";
 
 export interface DeviceStatusQueryStatus {
@@ -17,7 +17,7 @@ export const useDeviceStatus = (
   });
   useEffect(() => {
     if (updateIndicator > 0) {
-      setQueryStatus({status: undefined, error: undefined})
+      setQueryStatus({ status: undefined, error: undefined });
       const options = defaultFetchOptions();
       const url = `${apiUrl}/device/status?deviceId=${deviceId}`;
       fetch(url, options)

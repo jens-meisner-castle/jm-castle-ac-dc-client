@@ -1,14 +1,14 @@
 import { Grid, Typography } from "@mui/material";
-import { DateTime, Duration } from "luxon";
-import { useMemo } from "react";
-import { Tuple } from "victory";
 import {
   DatapointState,
   Device,
   PreviewOptions,
   SerializableDeviceType,
   UniqueDatapoint,
-} from "../api-types/Types";
+} from "jm-castle-ac-dc-types/dist/All.mjs";
+import { DateTime, Duration } from "luxon";
+import { useMemo } from "react";
+import { Tuple } from "victory";
 import { getDatapointChartChild } from "../charts/children/DatapointChartChild";
 import { DateToNumberChart } from "../charts/containers/DateToNumberChart";
 import { backendApiUrl } from "../configuration/Urls";

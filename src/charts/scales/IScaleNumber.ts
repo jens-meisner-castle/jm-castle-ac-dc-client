@@ -1,4 +1,4 @@
-import { AnyDataValue } from "../../api-types/Types";
+import { AnyDataValue } from "jm-castle-ac-dc-types/dist/All.mjs";
 import {
   FormatterFactory,
   NumberFormatOptions,

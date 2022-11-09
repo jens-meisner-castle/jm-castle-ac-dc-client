@@ -1,7 +1,7 @@
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Divider, Grid, IconButton, Typography } from "@mui/material";
+import { SerializableDeviceType } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { useMemo, useState } from "react";
-import { SerializableDeviceType } from "../api-types/Types";
 import { DatapointComponent } from "./DatapointComponent";
 import { TextareaComponent } from "./TextareaComponent";
 

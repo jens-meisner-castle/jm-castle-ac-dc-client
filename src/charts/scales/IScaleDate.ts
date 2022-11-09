@@ -1,5 +1,5 @@
+import { LuxonKey } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { DateTime, Duration } from "luxon";
-import { LuxonKey } from "../../api-types/Types";
 import {
   getDateFormat,
   getDateFormatWithoutYear,

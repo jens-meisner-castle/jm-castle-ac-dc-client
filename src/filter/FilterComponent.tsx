@@ -6,7 +6,7 @@ import { DateTimePicker } from "@mui/x-date-pickers";
 import { CalendarOrClockPickerView } from "@mui/x-date-pickers/internals/models";
 import { DateTime, DurationLike } from "luxon";
 import { useCallback, useMemo } from "react";
-import { UniqueDatapoint } from "../api-types/Types";
+import { UniqueDatapoint } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { getNewFilter } from "../utils/Filter";
 import { getDateFormat } from "../utils/Format";
 import { DatapointSelectionComponent } from "./DatapointSelectionComponent";

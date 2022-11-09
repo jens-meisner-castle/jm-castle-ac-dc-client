@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { EngineStatus } from "../api-types/Types";
+import { EngineStatus } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { defaultFetchOptions } from "./options/Utils";
 
 export interface EngineStatusQueryStatus {

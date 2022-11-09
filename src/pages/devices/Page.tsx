@@ -4,7 +4,7 @@ import {
   Device,
   DeviceDatapoint,
   SerializableDeviceType,
-} from "../../api-types/Types";
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 import { DeviceComponent } from "../../components/DeviceComponent";
 import { backendApiUrl } from "../../configuration/Urls";
 import { useDevices } from "../../hooks/useDevices";

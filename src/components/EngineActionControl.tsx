@@ -1,8 +1,11 @@
 import CheckIcon from "@mui/icons-material/Check";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import { Button, Grid, Typography } from "@mui/material";
+import {
+  EngineControlResponse,
+  SerializableEngine,
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 import { useEffect, useMemo, useState } from "react";
-import { EngineControlResponse, SerializableEngine } from "../api-types/Types";
 import { backendApiUrl } from "../configuration/Urls";
 import { useEngineAction } from "../hooks/useEngineAction";
 

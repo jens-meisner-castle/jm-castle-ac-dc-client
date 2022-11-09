@@ -1,10 +1,10 @@
+import { UniqueDatapoint } from "jm-castle-ac-dc-types/dist/All.mjs";
 import {
   Datum,
   VictoryArea,
   VictoryScatter,
   VictoryStyleInterface,
 } from "victory";
-import { UniqueDatapoint } from "../../api-types/Types";
 import { GanttFragment } from "../components/GanttFragment";
 import {
   DateToNumberData,

@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import { ControlstateContent, msg_subscribe } from "../api-types/Types";
+import {
+  ControlstateContent,
+  msg_subscribe,
+} from "jm-castle-ac-dc-types/dist/All.mjs";
 import { usePubSubWebsocket } from "./websocket/usePubSubWebsocket";
 
 export interface SystemControlPubSubStatus {

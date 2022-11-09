@@ -1,8 +1,8 @@
 import CheckIcon from "@mui/icons-material/Check";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import { Grid, Typography } from "@mui/material";
+import { SerializableEngine } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { DateTime } from "luxon";
-import { SerializableEngine } from "../api-types/Types";
 import { backendApiUrl } from "../configuration/Urls";
 import { useEngineStatus } from "../hooks/useEngineStatus";
 import { getDateFormat } from "../utils/Format";

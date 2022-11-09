@@ -2,8 +2,8 @@ import CheckIcon from "@mui/icons-material/Check";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import { Grid, Typography } from "@mui/material";
+import { Device } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { useMemo } from "react";
-import { Device } from "../api-types/Types";
 import { backendApiUrl } from "../configuration/Urls";
 import { useDeviceStatus } from "../hooks/useDeviceStatus";
 

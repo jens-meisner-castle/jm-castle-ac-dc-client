@@ -2,14 +2,14 @@ import CheckIcon from "@mui/icons-material/Check";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import { Grid, Typography, useTheme } from "@mui/material";
-import { DateTime, Duration } from "luxon";
-import { MouseEventHandler, useCallback, useMemo, useState } from "react";
 import {
   DatapointState,
   Device,
   SerializableDeviceType,
   UniqueDatapoint,
-} from "../api-types/Types";
+} from "jm-castle-ac-dc-types/dist/All.mjs";
+import { DateTime, Duration } from "luxon";
+import { MouseEventHandler, useCallback, useMemo, useState } from "react";
 import { backendApiUrl } from "../configuration/Urls";
 import { useDeviceControlDatapoints } from "../hooks/useDeviceControlDatapoints";
 import { useDeviceDatapoints } from "../hooks/useDeviceDatapoints";

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { SerializableService } from "../api-types/Types";
+import { SerializableService } from "jm-castle-ac-dc-types/dist/All.mjs";
 import { defaultFetchOptions } from "./options/Utils";
 
 export interface ApiServicesQueryStatus {
