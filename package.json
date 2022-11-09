@@ -1,7 +1,7 @@
 {
   "name": "jm-castle-ac-dc-client",
-  "version": "0.6.1",
-  "private": true,
+  "version": "0.6.2",
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
