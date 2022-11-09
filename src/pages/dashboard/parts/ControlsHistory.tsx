@@ -45,8 +45,8 @@ export const ControlsHistory = (props: ControlsHistoryProps) => {
             success: boolean;
             error?: string;
           } = { states: [], deviceId, success, error };
-          Object.entries(request).forEach(([k, request]) => {
-            const { state } = request;
+          Object.keys(request).forEach((datapointId) => {
+            const { state } = request[datapointId];
             const publicDatapointId = `${state.id}@${deviceId}`;
             const selection = datapointSelection.find(
               (sel) =>
