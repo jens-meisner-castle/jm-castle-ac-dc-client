@@ -1,9 +1,6 @@
 import { Paper, Typography } from "@mui/material";
 import { useMemo } from "react";
-import {
-  DatapointState,
-  UniqueDatapoint,
-} from "jm-castle-ac-dc-types/dist/All.mjs";
+import { DatapointState, UniqueDatapoint } from "jm-castle-ac-dc-types/build";
 import ControlExecutionTable from "../../../components/ControlExecutionTable";
 import { backendPubSubApiUrl } from "../../../configuration/Urls";
 import { DatapointSelection } from "../../../filter/DatapointSelectionMenu";

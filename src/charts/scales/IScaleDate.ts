@@ -1,4 +1,4 @@
-import { LuxonKey } from "jm-castle-ac-dc-types/dist/All.mjs";
+import { LuxonKey } from "jm-castle-ac-dc-types/build";
 import { DateTime, Duration } from "luxon";
 import {
   getDateFormat,

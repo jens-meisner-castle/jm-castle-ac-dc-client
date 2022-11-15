@@ -2,7 +2,7 @@ import {
   DatapointState,
   Row_AnyLog,
   UniqueDatapoint,
-} from "jm-castle-ac-dc-types/dist/All.mjs";
+} from "jm-castle-ac-dc-types/build";
 import { VictoryChartChildData } from "../Types";
 import {
   ChartChildProps,

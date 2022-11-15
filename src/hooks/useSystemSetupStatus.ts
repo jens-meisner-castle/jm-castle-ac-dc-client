@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { SystemSetupStatus } from "jm-castle-ac-dc-types/dist/All.mjs";
+import { SystemSetupStatus } from "jm-castle-ac-dc-types/build";
 import { defaultFetchOptions } from "./options/Utils";
 
 export interface SystemSetupStatusQueryStatus {

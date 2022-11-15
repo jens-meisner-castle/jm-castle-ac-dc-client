@@ -2,7 +2,7 @@ import {
   AnyDataValue,
   Row_AnyLog,
   UniqueDatapoint,
-} from "jm-castle-ac-dc-types/dist/All.mjs";
+} from "jm-castle-ac-dc-types/build";
 
 const DatapointColors: Record<string, string> = {};
 

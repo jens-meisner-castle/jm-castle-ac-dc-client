@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import {
   Row_DatapointControlLog,
   SelectResponse,
-} from "jm-castle-ac-dc-types/dist/All.mjs";
+} from "jm-castle-ac-dc-types/build";
 import { defaultFetchOptions } from "./options/Utils";
 
 /**

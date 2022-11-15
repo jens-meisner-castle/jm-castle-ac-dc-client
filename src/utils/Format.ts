@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { AnyDataValue, LuxonKey } from "jm-castle-ac-dc-types/dist/All.mjs";
+import { AnyDataValue, LuxonKey } from "jm-castle-ac-dc-types/build";
 import {
   DateFormatOptions,
   FormatterFactory,

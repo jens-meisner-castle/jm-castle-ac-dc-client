@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  PersistenceAreas,
-  UniqueDatapoint,
-} from "jm-castle-ac-dc-types/dist/All.mjs";
+import { PersistenceAreas, UniqueDatapoint } from "jm-castle-ac-dc-types/build";
 import { defaultFetchOptions } from "./options/Utils";
 
 export interface DatapointsQueryStatus {

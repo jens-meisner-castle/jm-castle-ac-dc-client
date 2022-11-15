@@ -1,6 +1,6 @@
 {
   "name": "jm-castle-ac-dc-client",
-  "version": "0.7.0",
+  "version": "0.9.0",
   "private": false,
   "scripts": {
     "dev": "react-scripts start",
@@ -8,6 +8,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "peerDependencies": {
+    "jm-castle-ac-dc-calc": "^0.x",
+    "jm-castle-ac-dc-types": "^0.x"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -40,7 +44,8 @@
     "eslint": "^8.23.0",
     "eslint-plugin-react": "^7.31.7",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "jm-castle-ac-dc-types": "^0.7.1",
+    "jm-castle-ac-dc-calc": "^0.9.6",
+    "jm-castle-ac-dc-types": "^0.9.10",
     "prettier": "2.7.1",
     "typescript": "4.8.2"
   },

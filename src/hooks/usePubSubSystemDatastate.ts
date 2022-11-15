@@ -1,8 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import {
-  DatastateContent,
-  msg_subscribe,
-} from "jm-castle-ac-dc-types/dist/All.mjs";
+import { DatastateContent, msg_subscribe } from "jm-castle-ac-dc-types/build";
 import { usePubSubWebsocket } from "./websocket/usePubSubWebsocket";
 
 export interface SystemDatastatePubSubStatus {

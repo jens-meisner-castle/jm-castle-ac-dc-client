@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { isWsMessage, WsMessage } from "jm-castle-ac-dc-types/dist/All.mjs";
+import { isWsMessage, WsMessage } from "jm-castle-ac-dc-types/build";
 
 export interface PubSubResult<T> {
   data?: T;

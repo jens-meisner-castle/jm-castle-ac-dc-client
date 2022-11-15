@@ -5,7 +5,7 @@ import {
   PreviewOptions,
   SerializableDeviceType,
   UniqueDatapoint,
-} from "jm-castle-ac-dc-types/dist/All.mjs";
+} from "jm-castle-ac-dc-types/build";
 import { DateTime, Duration } from "luxon";
 import { useMemo } from "react";
 import { Tuple } from "victory";

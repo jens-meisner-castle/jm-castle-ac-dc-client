@@ -1,4 +1,4 @@
-import { UniqueDatapoint } from "jm-castle-ac-dc-types/dist/All.mjs";
+import { UniqueDatapoint } from "jm-castle-ac-dc-types/build";
 import {
   Datum,
   VictoryArea,

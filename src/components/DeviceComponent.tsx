@@ -7,7 +7,7 @@ import {
   Device,
   SerializableDeviceType,
   UniqueDatapoint,
-} from "jm-castle-ac-dc-types/dist/All.mjs";
+} from "jm-castle-ac-dc-types/build";
 import { DateTime, Duration } from "luxon";
 import { MouseEventHandler, useCallback, useMemo, useState } from "react";
 import { backendApiUrl } from "../configuration/Urls";

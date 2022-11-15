@@ -7,10 +7,10 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination, {
-  TablePaginationProps
+  TablePaginationProps,
 } from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
-import { UniqueDatapoint } from "jm-castle-ac-dc-types/dist/All.mjs";
+import { UniqueDatapoint } from "jm-castle-ac-dc-types/build";
 import { CSSProperties, useEffect, useState } from "react";
 import { DatapointStateRow } from "../types/RowTypes";
 import { getDateFormatter, getDateFormatWithoutYear } from "../utils/Format";

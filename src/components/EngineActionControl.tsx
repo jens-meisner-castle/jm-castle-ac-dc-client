@@ -4,7 +4,7 @@ import { Button, Grid, Typography } from "@mui/material";
 import {
   EngineControlResponse,
   SerializableEngine,
-} from "jm-castle-ac-dc-types/dist/All.mjs";
+} from "jm-castle-ac-dc-types/build";
 import { useEffect, useMemo, useState } from "react";
 import { backendApiUrl } from "../configuration/Urls";
 import { useEngineAction } from "../hooks/useEngineAction";

@@ -2,7 +2,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Grid, IconButton, Paper, Typography } from "@mui/material";
-import { SystemStatus } from "jm-castle-ac-dc-types/dist/All.mjs";
+import { SystemStatus } from "jm-castle-ac-dc-types/build";
 import { DateTime } from "luxon";
 import { useEffect, useState } from "react";
 import { backendApiUrl } from "../configuration/Urls";

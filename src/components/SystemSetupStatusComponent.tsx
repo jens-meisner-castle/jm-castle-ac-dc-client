@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import { SystemSetupStatus } from "jm-castle-ac-dc-types/dist/All.mjs";
+import { SystemSetupStatus } from "jm-castle-ac-dc-types/build";
 
 export interface SystemSetupStatusComponentProps {
   status: SystemSetupStatus | undefined;
