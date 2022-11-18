@@ -27,74 +27,72 @@ export const OptionsMenu = (props: OptionsMenuProps) => {
   );
 
   return (
-    <>
-      <Menu open={isMenuOpen} onClose={onClose} anchorEl={anchorEl}>
-        <MenuItem>
-          <FormControlLabel
-            label={"Devices"}
-            control={
-              <Checkbox
-                onChange={(event, checked) =>
-                  handleNewOptions({ isDevicesVisible: checked })
-                }
-                checked={isDevicesVisible}
-              />
-            }
-          ></FormControlLabel>
-        </MenuItem>
-        <MenuItem>
-          <FormControlLabel
-            label={"Engines"}
-            control={
-              <Checkbox
-                onChange={(event, checked) =>
-                  handleNewOptions({ isEnginesVisible: checked })
-                }
-                checked={isEnginesVisible}
-              />
-            }
-          ></FormControlLabel>
-        </MenuItem>
-        <MenuItem>
-          <FormControlLabel
-            label={"Control panel"}
-            control={
-              <Checkbox
-                onChange={(event, checked) =>
-                  handleNewOptions({ isControlPanelVisible: checked })
-                }
-                checked={isControlPanelVisible}
-              />
-            }
-          ></FormControlLabel>
-        </MenuItem>
-        <MenuItem>
-          <FormControlLabel
-            label={"Control history"}
-            control={
-              <Checkbox
-                onChange={(event, checked) =>
-                  handleNewOptions({ isControlHistoryVisible: checked })
-                }
-                checked={isControlHistoryVisible}
-              />
-            }
-          ></FormControlLabel>
-        </MenuItem>
-        <MenuItem>
-          <FormControlLabel
-            label={"Datastate"}
-            control={
-              <Checkbox
-                onChange={(event, checked) =>
-                  handleNewOptions({ isDatastateVisible: checked })
-                }
-                checked={isDatastateVisible}
-              />
-            }
-          ></FormControlLabel>
-        </MenuItem>
-      </Menu>
-    </>
+    <Menu open={isMenuOpen} onClose={onClose} anchorEl={anchorEl}>
+      <MenuItem>
+        <FormControlLabel
+          label={"Devices"}
+          control={
+            <Checkbox
+              onChange={(event, checked) =>
+                handleNewOptions({ isDevicesVisible: checked })
+              }
+              checked={isDevicesVisible}
+            />
+          }
+        ></FormControlLabel>
+      </MenuItem>
+      <MenuItem>
+        <FormControlLabel
+          label={"Engines"}
+          control={
+            <Checkbox
+              onChange={(event, checked) =>
+                handleNewOptions({ isEnginesVisible: checked })
+              }
+              checked={isEnginesVisible}
+            />
+          }
+        ></FormControlLabel>
+      </MenuItem>
+      <MenuItem>
+        <FormControlLabel
+          label={"Control panel"}
+          control={
+            <Checkbox
+              onChange={(event, checked) =>
+                handleNewOptions({ isControlPanelVisible: checked })
+              }
+              checked={isControlPanelVisible}
+            />
+          }
+        ></FormControlLabel>
+      </MenuItem>
+      <MenuItem>
+        <FormControlLabel
+          label={"Control history"}
+          control={
+            <Checkbox
+              onChange={(event, checked) =>
+                handleNewOptions({ isControlHistoryVisible: checked })
+              }
+              checked={isControlHistoryVisible}
+            />
+          }
+        ></FormControlLabel>
+      </MenuItem>
+      <MenuItem>
+        <FormControlLabel
+          label={"Datastate"}
+          control={
+            <Checkbox
+              onChange={(event, checked) =>
+                handleNewOptions({ isDatastateVisible: checked })
+              }
+              checked={isDatastateVisible}
+            />
+          }
+        ></FormControlLabel>
+      </MenuItem>
+    </Menu>
   );
 };
