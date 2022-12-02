@@ -57,15 +57,17 @@ export const EngineActionControl = (props: EngineActionControlProps) => {
       </Grid>
       <Grid item>
         <Grid container direction="row">
-          {actionParts.map((part) => (
+          {actionParts.map((part, i) => (
             <Grid key={part.id} item>
-              <Button
-                variant="contained"
-                onClick={() => executeAction(part.id)}
-                disabled={status === "inProgress"}
-              >
-                {part.name}
-              </Button>
+              <div style={{ marginLeft: i > 0 ? 5 : 0 }}>
+                <Button
+                  variant="contained"
+                  onClick={() => executeAction(part.id)}
+                  disabled={status === "inProgress"}
+                >
+                  {part.name}
+                </Button>
+              </div>
             </Grid>
           ))}
         </Grid>

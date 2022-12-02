@@ -8,6 +8,7 @@ import { DateTime } from "luxon";
 import { CSSProperties } from "react";
 import { DatapointState, UniqueDatapoint } from "jm-castle-ac-dc-types/build";
 import { getDateFormatter, getNumberFormatter } from "../utils/Format";
+import { Tooltip } from "@mui/material";
 
 const numberFormatter = getNumberFormatter({ decimals: 2 });
 
@@ -36,7 +37,7 @@ export default function DatapointStateTable(props: DatapointStateTableProps) {
           {data.map((d) => {
             const { datapoint, datapointState } = d;
             const { valueType, valueUnit } = datapoint;
-            const { valueNum, valueString, at } = datapointState;
+            const { valueNum, valueString, at, id } = datapointState;
             const valueDisplay = datapoint
               ? datapoint.valueType === "number"
                 ? numberFormatter(valueNum)
@@ -51,14 +52,16 @@ export default function DatapointStateTable(props: DatapointStateTableProps) {
                 : dateFormatter(new Date(at));
             return (
               <TableRow key={d.datapoint.id}>
-                <TableCell
-                  style={cellStyle}
-                  size={cellSize}
-                  component="th"
-                  scope="row"
-                >
-                  {d.datapoint.name}
-                </TableCell>
+                <Tooltip title={`id: ${id}`}>
+                  <TableCell
+                    style={cellStyle}
+                    size={cellSize}
+                    component="th"
+                    scope="row"
+                  >
+                    {d.datapoint.name}
+                  </TableCell>
+                </Tooltip>
                 <TableCell
                   style={cellStyle}
                   size={cellSize}

@@ -84,7 +84,7 @@ export const ControlsHistory = (props: ControlsHistoryProps) => {
             minWidth: 400,
           }}
         >
-          <Typography>{perEngine.engineId}</Typography>
+          <Typography>{`${perEngine.engineId} (history)`}</Typography>
           {error && (
             <Typography>{"Error from control history: " + error}</Typography>
           )}

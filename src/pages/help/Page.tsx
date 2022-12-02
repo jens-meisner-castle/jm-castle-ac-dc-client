@@ -1,5 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import { ApiServices } from "./parts/ApiServices";
+import { DeviceInstall } from "./parts/DeviceInstall";
 import { DeviceTypes } from "./parts/DeviceTypes";
 import { MathJsPlayground } from "./parts/MathJsPlayground";
 
@@ -17,6 +18,9 @@ export const Page = () => {
       </Grid>
       <Grid item>
         <MathJsPlayground initialCode="1+1" />
+      </Grid>
+      <Grid item>
+        <DeviceInstall />
       </Grid>
     </Grid>
   );

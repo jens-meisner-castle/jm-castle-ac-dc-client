@@ -4,13 +4,7 @@ import { EngineActionControl } from "../../../components/EngineActionControl";
 import { backendApiUrl } from "../../../configuration/Urls";
 import { useEngines } from "../../../hooks/useEngines";
 
-export interface ControlPanelProps {
-  actions?: Record<string, string>;
-}
-
-export const ControlPanel = (props: ControlPanelProps) => {
-  const { actions } = props;
-  console.log(actions);
+export const ControlPanel = () => {
   const { engines, error } = useEngines(backendApiUrl);
   const enginesWithActions = useMemo(
     () => engines?.filter((engine) => Object.keys(engine.actions).length > 0),

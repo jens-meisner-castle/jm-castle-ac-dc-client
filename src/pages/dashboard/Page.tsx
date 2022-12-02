@@ -216,7 +216,7 @@ export const Page = () => {
               <Grid container direction="column">
                 {isControlPanelVisible && (
                   <Grid item>
-                    <ControlPanel actions={{}} />
+                    <ControlPanel />
                   </Grid>
                 )}
                 {isControlHistoryVisible && (
