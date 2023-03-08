@@ -1,7 +1,8 @@
 import CheckIcon from "@mui/icons-material/Check";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
-import { Grid, Typography, useTheme } from "@mui/material";
+import RefreshIcon from "@mui/icons-material/Refresh";
+import { Grid, Tooltip, Typography, useTheme } from "@mui/material";
 import {
   DatapointState,
   Device,
@@ -37,7 +38,11 @@ export const DeviceComponent = (props: DeviceComponentProps) => {
   const actions = useMemo(() => {
     const newActions: AppAction[] = [];
     newActions.push({
-      label: "Refresh",
+      label: (
+        <Tooltip title="Daten aktualisieren">
+          <RefreshIcon />
+        </Tooltip>
+      ),
       onClick: refreshStatus,
     });
     return newActions;

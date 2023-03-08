@@ -2,7 +2,7 @@ import { Button, Grid } from "@mui/material";
 import { MutableRefObject } from "react";
 
 export interface AppAction {
-  label: string;
+  label: string | React.ReactElement;
   disabled?: boolean;
   onClick: () => void;
   elementRef?: MutableRefObject<HTMLButtonElement | null>;

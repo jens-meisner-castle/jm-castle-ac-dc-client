@@ -1,11 +1,11 @@
 import { Grid, Paper, Typography } from "@mui/material";
-import { DateTime, Duration } from "luxon";
-import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Device,
   DeviceDatapoint,
   SerializableDeviceType,
 } from "jm-castle-ac-dc-types/build";
+import { DateTime, Duration } from "luxon";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AppAction, AppActions } from "../../components/AppActions";
 import { SimulationPreviewComponent } from "../../components/SimulationPreviewComponent";
 import { backendApiUrl } from "../../configuration/Urls";
@@ -79,7 +79,6 @@ export const Page = () => {
   const toYear = useMemo(() => filter.to.endOf("year"), [filter]);
   const actions = useMemo(() => {
     const newActions: AppAction[] = [];
-    // newActions.push({ label: "Refresh", onClick: executeSelect });
     return newActions;
   }, []);
 

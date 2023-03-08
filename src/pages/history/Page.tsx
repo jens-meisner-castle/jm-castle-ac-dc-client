@@ -1,11 +1,13 @@
+import RefreshIcon from "@mui/icons-material/Refresh";
+import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import { Grid, Paper, Tooltip, Typography } from "@mui/material";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Tuple } from "victory";
 import {
   getCategoryOfUnit,
   Row_AnyLog,
   UniqueDatapoint,
 } from "jm-castle-ac-dc-types/build";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Tuple } from "victory";
 import { ChartChildType } from "../../charts/children/ChartChild";
 import { DatapointChartChildProps } from "../../charts/children/DatapointChartChild";
 import {
@@ -328,9 +330,16 @@ export const Page = () => {
 
   const actions = useMemo(() => {
     const newActions: AppAction[] = [];
-    newActions.push({ label: "Refresh", onClick: executeSelect });
     newActions.push({
-      label: "Options",
+      label: (
+        <Tooltip title="Daten aktualisieren">
+          <RefreshIcon />
+        </Tooltip>
+      ),
+      onClick: executeSelect,
+    });
+    newActions.push({
+      label: <SettingsApplicationsIcon />,
       onClick: () => setIsOptionsVisible((previous) => !previous),
       elementRef: optionsSelectionRef,
     });

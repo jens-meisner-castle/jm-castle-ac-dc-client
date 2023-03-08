@@ -1,3 +1,4 @@
+import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Grid, Typography } from "@mui/material";
 import { DateTime } from "luxon";
 import { useCallback, useMemo, useState } from "react";
@@ -33,7 +34,7 @@ export const SelectFromDatapointControlLog = () => {
   const actions = useMemo(() => {
     const newActions: AppAction[] = [];
     newActions.push({
-      label: "Execute",
+      label: <PlayCircleFilledIcon />,
       onClick: executeTest,
     });
     return newActions;

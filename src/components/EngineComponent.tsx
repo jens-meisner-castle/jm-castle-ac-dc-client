@@ -1,7 +1,8 @@
 import CheckIcon from "@mui/icons-material/Check";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import { Grid, IconButton, Typography } from "@mui/material";
+import RefreshIcon from "@mui/icons-material/Refresh";
+import { Grid, IconButton, Tooltip, Typography } from "@mui/material";
 import { SerializableEngine } from "jm-castle-ac-dc-types/build";
 import { DateTime } from "luxon";
 import { useCallback, useMemo, useState } from "react";
@@ -68,7 +69,11 @@ export const EngineComponent = (props: EngineComponentProps) => {
   const actions = useMemo(() => {
     const newActions: AppAction[] = [];
     newActions.push({
-      label: "Refresh",
+      label: (
+        <Tooltip title="Daten aktualisieren">
+          <RefreshIcon />
+        </Tooltip>
+      ),
       onClick: refreshStatus,
     });
     newActions.push({

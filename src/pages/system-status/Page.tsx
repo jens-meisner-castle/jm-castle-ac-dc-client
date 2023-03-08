@@ -1,4 +1,5 @@
-import { Grid, Paper, Typography } from "@mui/material";
+import RefreshIcon from "@mui/icons-material/Refresh";
+import { Grid, Paper, Tooltip, Typography } from "@mui/material";
 import { useCallback, useMemo, useState } from "react";
 import { AppAction, AppActions } from "../../components/AppActions";
 import { SystemStatusComponent } from "../../components/SystemStatusComponent";
@@ -42,7 +43,14 @@ export const Page = () => {
 
   const actions = useMemo(() => {
     const newActions: AppAction[] = [];
-    newActions.push({ label: "Refresh", onClick: refreshStatus });
+    newActions.push({
+      label: (
+        <Tooltip title="Daten aktualisieren">
+          <RefreshIcon />
+        </Tooltip>
+      ),
+      onClick: refreshStatus,
+    });
     newActions.push({
       label: "Restart",
       onClick: restartSystem,
