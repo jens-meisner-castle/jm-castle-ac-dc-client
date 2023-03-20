@@ -1,10 +1,13 @@
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import { Grid, Typography } from "@mui/material";
+import {
+  AppAction,
+  AppActions,
+  TextareaComponent,
+  TextComponent,
+} from "jm-castle-components/build";
 import { DateTime } from "luxon";
 import { useCallback, useMemo, useState } from "react";
-import { AppAction, AppActions } from "../../components/AppActions";
-import { TextareaComponent } from "../../components/TextareaComponent";
-import { TextComponent } from "../../components/TextComponent";
 import { backendApiUrl } from "../../configuration/Urls";
 import { useDatapointLogSelect } from "../../hooks/useDatapointLogSelect";
 

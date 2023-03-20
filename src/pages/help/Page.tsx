@@ -6,21 +6,29 @@ import { MathJsPlayground } from "./parts/MathJsPlayground";
 
 export const Page = () => {
   return (
-    <Grid container direction="column" gap={2}>
+    <Grid container direction="column">
       <Grid item>
         <Typography variant="h5">{"Help"}</Typography>
       </Grid>
       <Grid item>
-        <DeviceTypes />
+        <div style={{ marginTop: 5 }}>
+          <DeviceTypes />
+        </div>
       </Grid>
       <Grid item>
-        <ApiServices />
+        <div style={{ marginTop: 5 }}>
+          <ApiServices />
+        </div>
       </Grid>
       <Grid item>
-        <MathJsPlayground initialCode="1+1" />
+        <div style={{ marginTop: 5 }}>
+          <MathJsPlayground initialCode="1+1" />
+        </div>
       </Grid>
       <Grid item>
-        <DeviceInstall />
+        <div style={{ marginTop: 5 }}>
+          <DeviceInstall />
+        </div>
       </Grid>
     </Grid>
   );

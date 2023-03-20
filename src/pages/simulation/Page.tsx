@@ -4,9 +4,9 @@ import {
   DeviceDatapoint,
   SerializableDeviceType,
 } from "jm-castle-ac-dc-types/build";
+import { AppAction, AppActions } from "jm-castle-components/build";
 import { DateTime, Duration } from "luxon";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { AppAction, AppActions } from "../../components/AppActions";
 import { SimulationPreviewComponent } from "../../components/SimulationPreviewComponent";
 import { backendApiUrl } from "../../configuration/Urls";
 import { FilterComponent } from "../../filter/FilterComponent";
@@ -91,7 +91,7 @@ export const Page = () => {
             <Typography variant="h5">{"Simulation"}</Typography>
           </Grid>
           <Grid item>
-            <Paper>
+            <Paper style={{ padding: 5, marginBottom: 5 }}>
               <AppActions actions={actions} />
             </Paper>
           </Grid>

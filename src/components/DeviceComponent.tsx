@@ -9,13 +9,13 @@ import {
   SerializableDeviceType,
   UniqueDatapoint,
 } from "jm-castle-ac-dc-types/build";
+import { AppAction, AppActions } from "jm-castle-components/build";
 import { DateTime, Duration } from "luxon";
 import { MouseEventHandler, useCallback, useMemo, useState } from "react";
 import { backendApiUrl } from "../configuration/Urls";
 import { useDeviceControlDatapoints } from "../hooks/useDeviceControlDatapoints";
 import { useDeviceDatapoints } from "../hooks/useDeviceDatapoints";
 import { useDeviceStatus } from "../hooks/useDeviceStatus";
-import { AppAction, AppActions } from "./AppActions";
 import { DatapointComponent } from "./DatapointComponent";
 import { DatapointStateComponent } from "./DatapointStateComponent";
 import { SimulationPreviewComponent } from "./SimulationPreviewComponent";

@@ -1,9 +1,12 @@
 import RefreshIcon from "@mui/icons-material/Refresh";
 import { Grid, Paper, Tooltip, Typography } from "@mui/material";
+import {
+  AppAction,
+  AppActions,
+  TextComponent,
+} from "jm-castle-components/build";
 import { useCallback, useMemo, useState } from "react";
-import { AppAction, AppActions } from "../../components/AppActions";
 import { SystemStatusComponent } from "../../components/SystemStatusComponent";
-import { TextComponent } from "../../components/TextComponent";
 import { backendApiUrl } from "../../configuration/Urls";
 import {
   ControlAction,
@@ -67,7 +70,7 @@ export const Page = () => {
         <Typography variant="h5">{"System status"}</Typography>
       </Grid>
       <Grid item>
-        <Paper>
+        <Paper style={{ padding: 5, marginBottom: 5 }}>
           <AppActions actions={actions} />
         </Paper>
       </Grid>

@@ -1,8 +1,8 @@
 import RefreshIcon from "@mui/icons-material/Refresh";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import { Grid, Paper, Tooltip, Typography } from "@mui/material";
+import { AppAction, AppActions } from "jm-castle-components/build";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AppAction, AppActions } from "../../components/AppActions";
 import { backendApiUrl } from "../../configuration/Urls";
 import {
   DatapointSelection,
@@ -184,7 +184,7 @@ export const Page = () => {
           <Typography variant="h5">{"Dashboard"}</Typography>
         </Grid>
         <Grid item>
-          <Paper>
+          <Paper style={{ padding: 5, marginBottom: 5 }}>
             <AppActions actions={actions} />
           </Paper>
         </Grid>

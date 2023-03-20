@@ -1,6 +1,6 @@
 import { Grid, Paper, Typography } from "@mui/material";
+import { TextComponent } from "jm-castle-components/build";
 import { EngineComponent } from "../../components/EngineComponent";
-import { TextComponent } from "../../components/TextComponent";
 import { backendApiUrl } from "../../configuration/Urls";
 import { useEngines } from "../../hooks/useEngines";
 

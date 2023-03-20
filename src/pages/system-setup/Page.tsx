@@ -1,11 +1,15 @@
 import RefreshIcon from "@mui/icons-material/Refresh";
-import { Grid, Paper, Tooltip, Typography } from "@mui/material";
-import { ExecuteSetupResponse } from "jm-castle-ac-dc-types/build/index";
+import { Grid, Paper, Typography } from "@mui/material";
+import {
+  AppAction,
+  AppActions,
+  ErrorData,
+  ErrorDisplays,
+  SystemSetupResultComponent,
+  SystemSetupStatusComponent,
+} from "jm-castle-components/build";
+import { ExecuteSetupResponse } from "jm-castle-types/build";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { AppAction, AppActions } from "../../components/AppActions";
-import { SystemSetupResultComponent } from "../../components/SystemSetupResultComponent";
-import { SystemSetupStatusComponent } from "../../components/SystemSetupStatusComponent";
-import { TextComponent } from "../../components/TextComponent";
 import { backendApiUrl } from "../../configuration/Urls";
 import {
   ExecuteState,
@@ -15,27 +19,39 @@ import { useSystemSetupStatus } from "../../hooks/useSystemSetupStatus";
 
 export const Page = () => {
   const [updateIndicator, setUpdateIndicator] = useState(1);
-  const { status, error: statusError } = useSystemSetupStatus(
+  const setupStatusApiResponse = useSystemSetupStatus(
     backendApiUrl,
     updateIndicator
   );
+
+  const { response: status } = setupStatusApiResponse;
+
   const [execution, setExecution] = useState<{
     setupResult: ExecuteSetupResponse["setup"] | undefined;
     state: ExecuteState;
   }>({ setupResult: undefined, state: "not started" });
 
-  const { setup: hookResult, error: setupError } = useExecuteSystemSetup(
+  const setupExecutionApiResponse = useExecuteSystemSetup(
     backendApiUrl,
     execution.state
   );
+  const { response: setupExecutionResponse } = setupExecutionApiResponse;
+
+  const errorData = useMemo(() => {
+    const newData: Record<string, ErrorData> = {};
+    newData.setupStatus = setupStatusApiResponse;
+    newData.setupExecution = setupExecutionApiResponse;
+    return newData;
+  }, [setupStatusApiResponse, setupExecutionApiResponse]);
 
   useEffect(() => {
-    setExecution({ setupResult: hookResult, state: "not started" });
-  }, [hookResult]);
+    setExecution({ setupResult: setupExecutionResponse, state: "not started" });
+  }, [setupExecutionResponse]);
 
   const startSetup = useCallback(() => {
     setExecution({ setupResult: undefined, state: "start" });
   }, []);
+
   const refreshStatus = useCallback(() => {
     setUpdateIndicator((previous) => previous + 1);
   }, []);
@@ -43,58 +59,29 @@ export const Page = () => {
   const actions = useMemo(() => {
     const newActions: AppAction[] = [];
     newActions.push({
-      label: (
-        <Tooltip title="Daten aktualisieren">
-          <RefreshIcon />
-        </Tooltip>
-      ),
+      label: <RefreshIcon />,
+      tooltip: "Daten aktualisieren",
       onClick: refreshStatus,
     });
     newActions.push({ label: "SETUP", onClick: startSetup });
     return newActions;
   }, [refreshStatus, startSetup]);
 
-  const leftColumnWidth = 200;
   const { setupResult } = execution;
 
   return (
     <Grid container direction="column">
       <Grid item>
-        <Typography variant="h5">{"System (setup) status"}</Typography>
+        <Typography variant="h5">{"System Setup"}</Typography>
       </Grid>
       <Grid item>
-        <Paper>
+        <Paper style={{ padding: 5, marginBottom: 5 }}>
           <AppActions actions={actions} />
         </Paper>
       </Grid>
-      {setupError && (
-        <Grid item>
-          <Paper>
-            <Grid container direction="row">
-              <Grid item style={{ width: leftColumnWidth }}>
-                <Typography>{"Setup error"}</Typography>
-              </Grid>
-              <Grid item>
-                <TextComponent value={setupError} />
-              </Grid>
-            </Grid>
-          </Paper>
-        </Grid>
-      )}
-      {statusError && (
-        <Grid item>
-          <Paper>
-            <Grid container direction="row">
-              <Grid item style={{ width: leftColumnWidth }}>
-                <Typography>{"Status error"}</Typography>
-              </Grid>
-              <Grid item>
-                <TextComponent value={statusError} />
-              </Grid>
-            </Grid>
-          </Paper>
-        </Grid>
-      )}
+      <Grid item>
+        <ErrorDisplays results={errorData} />
+      </Grid>
       {setupResult && (
         <Grid item>
           <Paper>

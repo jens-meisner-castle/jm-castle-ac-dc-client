@@ -3,8 +3,8 @@ import { AppBar, Box, Toolbar } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { ToolbarLink } from "jm-castle-components/build";
 import { MouseEventHandler, useState } from "react";
-import { ToolbarLink } from "./ToolbarLink";
 
 const pages = [
   { to: "/", label: "Home" },

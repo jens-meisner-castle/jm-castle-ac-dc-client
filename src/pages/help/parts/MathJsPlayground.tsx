@@ -1,14 +1,14 @@
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Grid, IconButton, Paper, TextField, Typography } from "@mui/material";
-import math, { all, create, isResultSet, Matrix } from "mathjs";
-import { useEffect, useMemo, useState } from "react";
-import { useDebounce } from "use-debounce";
 import {
   AnyDataValue,
   DatapointState,
   SequenceState,
 } from "jm-castle-ac-dc-types/build";
-import { TextareaComponent } from "../../../components/TextareaComponent";
+import { TextareaComponent } from "jm-castle-components/build";
+import math, { all, create, isResultSet, Matrix } from "mathjs";
+import { useEffect, useMemo, useState } from "react";
+import { useDebounce } from "use-debounce";
 import { backendApiUrl } from "../../../configuration/Urls";
 import { useSystemDatastate } from "../../../hooks/useSystemDatastate";
 

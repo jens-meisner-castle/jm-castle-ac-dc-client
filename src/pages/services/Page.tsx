@@ -1,8 +1,8 @@
 import SecurityIcon from "@mui/icons-material/Security";
 import { Grid, IconButton, Paper, Typography } from "@mui/material";
+import { TextComponent } from "jm-castle-components/build";
 import { useMemo, useState } from "react";
 import { ApiServiceComponent } from "../../components/ApiServiceComponent";
-import { TextComponent } from "../../components/TextComponent";
 import { backendApiUrl } from "../../configuration/Urls";
 import { useApiServices } from "../../hooks/useApiServices";
 

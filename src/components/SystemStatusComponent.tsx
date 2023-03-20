@@ -3,6 +3,7 @@ import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Grid, IconButton, Paper, Typography } from "@mui/material";
 import { SystemStatus } from "jm-castle-ac-dc-types/build";
+import { TextareaComponent } from "jm-castle-components/build";
 import { DateTime } from "luxon";
 import { useEffect, useState } from "react";
 import { backendApiUrl } from "../configuration/Urls";
@@ -12,7 +13,6 @@ import { useDeviceDatapoints } from "../hooks/useDeviceDatapoints";
 import { usePersistentDatapoints } from "../hooks/usePersistentDatapoints";
 import { getDateFormat } from "../utils/Format";
 import { DatapointComponent } from "./DatapointComponent";
-import { TextareaComponent } from "./TextareaComponent";
 
 export interface SystemStatusComponentProps {
   status: SystemStatus | undefined;

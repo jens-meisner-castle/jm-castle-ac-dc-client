@@ -1,8 +1,8 @@
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Grid, IconButton, Paper, Typography } from "@mui/material";
 import { Device } from "jm-castle-ac-dc-types/build";
+import { TextareaComponent } from "jm-castle-components/build";
 import { useMemo, useState } from "react";
-import { TextareaComponent } from "../../../components/TextareaComponent";
 
 export const DeviceInstall = () => {
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);

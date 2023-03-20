@@ -1,39 +1,49 @@
+import {
+  ApiServiceResponse,
+  SystemSetupStatus,
+  UnknownErrorCode,
+} from "jm-castle-types/build";
 import { useEffect, useState } from "react";
-import { SystemSetupStatus } from "jm-castle-ac-dc-types/build";
 import { defaultFetchOptions } from "./options/Utils";
 
-export interface SystemSetupStatusQueryStatus {
-  status: SystemSetupStatus | undefined;
-  error: string | undefined;
-}
 export const useSystemSetupStatus = (
   apiUrl: string,
   updateIndicator: number
 ) => {
-  const [queryStatus, setQueryStatus] = useState<SystemSetupStatusQueryStatus>({
-    status: undefined,
-    error: undefined,
+  const [queryStatus, setQueryStatus] = useState<
+    ApiServiceResponse<SystemSetupStatus | undefined>
+  >({
+    response: undefined,
   });
   useEffect(() => {
     const options = defaultFetchOptions();
     const url = `${apiUrl}/system/setup-status`;
     fetch(url, options)
       .then((response) => {
-        response.json().then((obj) => {
-          const { response, error } = obj;
-          const { status } = response || {};
-          setQueryStatus({
-            error,
-            status,
+        response.json().then((obj: ApiServiceResponse<SystemSetupStatus>) => {
+          const { response, error, errorCode, errorDetails } = obj;
+          if (error) {
+            return setQueryStatus({ error, errorCode, errorDetails });
+          }
+          console.log(response);
+          if (!response) {
+            return setQueryStatus({
+              errorCode: UnknownErrorCode,
+              errorDetails,
+              error: "Received no error and undefined response.",
+            });
+          }
+          return setQueryStatus({
+            response,
           });
         });
       })
       .catch((error: Error) => {
         console.error(error);
-        setQueryStatus((previous) => ({
+        return setQueryStatus({
+          errorCode: UnknownErrorCode,
           error: error.toString(),
-          status: previous.status,
-        }));
+        });
       });
   }, [apiUrl, updateIndicator]);
   return queryStatus;

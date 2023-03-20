@@ -6,6 +6,7 @@ import {
   Row_AnyLog,
   UniqueDatapoint,
 } from "jm-castle-ac-dc-types/build";
+import { AppAction, AppActions } from "jm-castle-components/build";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Tuple } from "victory";
 import { ChartChildType } from "../../charts/children/ChartChild";
@@ -14,7 +15,6 @@ import {
   DatapointsChart,
   DatapointsChartProps,
 } from "../../charts/containers/DatapointsChart";
-import { AppAction, AppActions } from "../../components/AppActions";
 import { DatapointHistoryTable } from "../../components/DatapointHistoryTable";
 import { backendApiUrl } from "../../configuration/Urls";
 import { FilterComponent } from "../../filter/FilterComponent";
@@ -262,7 +262,7 @@ export const Page = () => {
       type: DatapointsChartProps["type"];
     }[] = [];
     const booleanDatapoints: UniqueDatapoint[] = [];
-    const booleanChart: typeof newPerChart[number] = {
+    const booleanChart: (typeof newPerChart)[number] = {
       data: {},
       tooltip: "datapoints of type boolean",
       heading: "on / off",
@@ -299,7 +299,7 @@ export const Page = () => {
           const tooltip = `id: ${datapointId}${
             yOffsetFn ? ", offset: " + yOffsetFn() : ""
           }`;
-          const perChart: typeof newPerChart[number] = {
+          const perChart: (typeof newPerChart)[number] = {
             data: {},
             tooltip,
             heading,
@@ -363,7 +363,7 @@ export const Page = () => {
             <Typography variant="h5">{"History"}</Typography>
           </Grid>
           <Grid item>
-            <Paper>
+            <Paper style={{ padding: 5, marginBottom: 5 }}>
               <AppActions actions={actions} />
             </Paper>
           </Grid>
