@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import { ExecuteSetupResponse } from "jm-castle-ac-dc-types/build";
+import { ExecuteSetupResponse } from "jm-castle-types/build";
 import { TextareaComponent } from "jm-castle-components/build";
 
 export interface SystemSetupResultComponentProps {
