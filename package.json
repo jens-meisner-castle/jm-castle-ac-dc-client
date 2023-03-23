@@ -1,6 +1,6 @@
 {
   "name": "jm-castle-ac-dc-client",
-  "version": "0.14.2",
+  "version": "0.14.3",
   "private": false,
   "files": [
     "build",
@@ -49,7 +49,7 @@
     "eslint": "^8.23.0",
     "eslint-plugin-react": "^7.31.7",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "jm-castle-ac-dc-calc": "^0.9.9",
+    "jm-castle-ac-dc-calc": "^0.10.0",
     "jm-castle-ac-dc-types": "^0.14.1",
     "jm-castle-components": "^0.3.1",
     "jm-castle-types": "^0.4.3",
