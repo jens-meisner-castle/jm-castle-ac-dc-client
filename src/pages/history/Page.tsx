@@ -23,6 +23,7 @@ import { useDatapointControlLogSelect } from "../../hooks/useDatapointControlLog
 import { useDatapointLogSelect } from "../../hooks/useDatapointLogSelect";
 import { usePersistentDatapoints } from "../../hooks/usePersistentDatapoints";
 import { DatapointStateRow } from "../../types/RowTypes";
+import { calculateIntegral } from "../../utils/Calc";
 import {
   makeChartColorAccessOnControlLog,
   makeChartColorAccessOnDatapointLog,
@@ -295,7 +296,14 @@ export const Page = () => {
             valueUnit && getCategoryOfUnit(valueUnit) === "energy"
               ? () => -firstY
               : undefined;
-          const heading = `${name} (${valueUnit || valueType})`;
+          const integralValue =
+            valueUnit === "W" ? calculateIntegral(data.rows, "h") : undefined;
+          console.log(valueUnit, integralValue);
+          const heading = integralValue
+            ? `${name} (${valueUnit || valueType}) (${Math.floor(
+                integralValue
+              )} Wh)`
+            : `${name} (${valueUnit || valueType})`;
           const tooltip = `id: ${datapointId}${
             yOffsetFn ? ", offset: " + yOffsetFn() : ""
           }`;

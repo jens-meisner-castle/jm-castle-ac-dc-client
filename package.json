@@ -1,6 +1,6 @@
 {
   "name": "jm-castle-ac-dc-client",
-  "version": "0.14.0",
+  "version": "0.14.2",
   "private": false,
   "files": [
     "build",
@@ -52,7 +52,7 @@
     "jm-castle-ac-dc-calc": "^0.9.9",
     "jm-castle-ac-dc-types": "^0.14.1",
     "jm-castle-components": "^0.3.1",
-    "jm-castle-types": "^0.4.1",
+    "jm-castle-types": "^0.4.3",
     "prettier": "^2.8.1",
     "typescript": "^4.9.4"
   },
