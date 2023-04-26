@@ -1,8 +1,12 @@
 {
   "name": "jm-castle-ac-dc-client",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "private": false,
   "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "clean": "del-cli dist",
     "dev": "vite --config vite.dev.config.ts",
