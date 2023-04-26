@@ -298,7 +298,6 @@ export const Page = () => {
               : undefined;
           const integralValue =
             valueUnit === "W" ? calculateIntegral(data.rows, "h") : undefined;
-          console.log(valueUnit, integralValue);
           const heading = integralValue
             ? `${name} (${valueUnit || valueType}) (${Math.floor(
                 integralValue

@@ -63,7 +63,7 @@ export default function DatapointStateTable(props: DatapointStateTableProps) {
                   </TableCell>
                 </Tooltip>
                 <TableCell
-                  style={cellStyle}
+                  style={{ ...cellStyle, maxWidth: 300 }}
                   size={cellSize}
                   align={valueType === "string" ? "left" : "right"}
                 >
